@@ -22,7 +22,7 @@
         </tr>
         <tr>
             <td>密码</td>
-            <td><input type="password" name="id"></td>
+            <td><input type="password" name="password"></td>
         </tr>
         <tr>
             <td></td>

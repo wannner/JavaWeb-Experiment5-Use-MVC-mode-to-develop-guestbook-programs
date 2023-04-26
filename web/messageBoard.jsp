@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-
+<%=session.getAttribute("name")%>
 </body>
 </html>
