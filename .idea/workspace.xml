@@ -9,24 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d36bad5a-7e19-4596-884c-67b9a2cb1d9c" name="变更" comment="web环境搭建">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Experiment5_Web_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/LoginServelt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/MessageServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/RevertServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/IMessageDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/IPersonDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/IRevertDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/impl/MessageDAOimpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/impl/PersonDAOimpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/impl/RevertDAOimpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db/ConnectionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/factory/DAOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vo/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vo/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vo/Revert.java" afterDir="false" />
+    <list default="true" id="d36bad5a-7e19-4596-884c-67b9a2cb1d9c" name="变更" comment="MVC框架搭建">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/servlet-api.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiment5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Experiment5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/LoginServelt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/LoginServelt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +27,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -73,7 +63,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "模块",
+    "project.structure.last.edited": "库",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
@@ -84,6 +74,7 @@
       <recent name="C:\Users\wannner\IdeaProjects\Experiment5\web\WEB-INF\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\wannner\IdeaProjects\Experiment5\web" />
       <recent name="C:\Users\wannner\IdeaProjects\Experiment5\web\WEB-INF" />
     </key>
   </component>
@@ -201,7 +192,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682388579351</updated>
       <workItem from="1682388580508" duration="4294000" />
-      <workItem from="1682472243262" duration="3963000" />
+      <workItem from="1682472243262" duration="9843000" />
     </task>
     <task id="LOCAL-00001" summary="数据库创建完成">
       <created>1682472323695</created>
@@ -217,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682472869837</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="MVC框架搭建">
+      <created>1682477160099</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682477160099</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +235,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="数据库创建完成" />
     <MESSAGE value="web环境搭建" />
-    <option name="LAST_COMMIT_MESSAGE" value="web环境搭建" />
+    <MESSAGE value="MVC框架搭建" />
+    <option name="LAST_COMMIT_MESSAGE" value="MVC框架搭建" />
   </component>
 </project>
