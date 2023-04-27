@@ -1,14 +1,22 @@
 package vo;
 
+import java.util.Date;
+
 public class Message {
     int messageID;
     String title;
     String content;
     String writer;
-    String writerDate;
 
-    public Message() {
+    public String getWriterDate() {
+        return writerDate;
     }
+
+    public void setWriterDate(String writerDate) {
+        this.writerDate = writerDate;
+    }
+
+    String writerDate;
 
     @Override
     public String toString() {
@@ -53,11 +61,6 @@ public class Message {
         this.writer = writer;
     }
 
-    public String getWriterDate() {
-        return writerDate;
-    }
-
-    public void setWriterDate(String writerDate) {
-        this.writerDate = writerDate;
+    public Message() {
     }
 }

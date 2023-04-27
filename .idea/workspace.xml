@@ -9,9 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d36bad5a-7e19-4596-884c-67b9a2cb1d9c" name="变更" comment="完成login页面跳转到servlet的功能">
+    <list default="true" id="d36bad5a-7e19-4596-884c-67b9a2cb1d9c" name="变更" comment="完成logout页面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiment5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Experiment5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/IMessageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/IMessageDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/impl/MessageDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/impl/MessageDAOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vo/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vo/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/classes/dao/IMessageDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/classes/dao/IMessageDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/classes/dao/impl/MessageDAOimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/classes/dao/impl/MessageDAOimpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/classes/vo/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/classes/vo/Message.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/messageBoard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/messageBoard.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +31,8 @@
         <option value="Interface" />
         <option value="Class" />
         <option value="Jsp File" />
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -41,6 +49,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+  </component>
   <component name="ProjectId" id="2Otn7PBZhyUoxojV9BcHruV5tDa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -49,23 +60,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/wannner/IdeaProjects/Experiment4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;库&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/wannner/IdeaProjects/Experiment5",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\wannner\IdeaProjects\Experiment5\web\WEB-INF\lib" />
@@ -74,11 +93,49 @@
       <recent name="C:\Users\wannner\IdeaProjects\Experiment5\web" />
       <recent name="C:\Users\wannner\IdeaProjects\Experiment5\web\WEB-INF" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="dao.impl" />
+    </key>
   </component>
   <component name="RunManager" selected="Tomcat 服务器.Tomcat 9.0.72">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Experiment5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageDAOimplTest.showAllMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Experiment5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="dao.impl.MessageDAOimplTest" />
+      <option name="METHOD_NAME" value="showAllMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageDAOimplTest.testShowAllMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Experiment5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="dao.impl.MessageDAOimplTest" />
+      <option name="METHOD_NAME" value="testShowAllMessage" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,11 +228,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.MessageDAOimplTest.showAllMessage" />
+      <item itemvalue="JUnit.MessageDAOimplTest.testShowAllMessage" />
       <item itemvalue="Tomcat 服务器.Tomcat 9.0.72" />
       <item itemvalue="应用程序.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MessageDAOimplTest.showAllMessage" />
+        <item itemvalue="JUnit.MessageDAOimplTest.testShowAllMessage" />
         <item itemvalue="应用程序.Main" />
       </list>
     </recent_temporary>
@@ -190,7 +251,8 @@
       <updated>1682388579351</updated>
       <workItem from="1682388580508" duration="4294000" />
       <workItem from="1682472243262" duration="18698000" />
-      <workItem from="1682562238681" duration="945000" />
+      <workItem from="1682562238681" duration="3422000" />
+      <workItem from="1682565690237" duration="2007000" />
     </task>
     <task id="LOCAL-00001" summary="数据库创建完成">
       <created>1682472323695</created>
@@ -220,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682486951430</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完成logout页面">
+      <created>1682563233218</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682563233218</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +311,7 @@
     <MESSAGE value="web环境搭建" />
     <MESSAGE value="MVC框架搭建" />
     <MESSAGE value="完成login页面跳转到servlet的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成login页面跳转到servlet的功能" />
+    <MESSAGE value="完成logout页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成logout页面" />
   </component>
 </project>
