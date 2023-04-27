@@ -15,7 +15,7 @@
 </head>
 <body>
 <%
-    List<Message> list = DAOFactory.getMessageDAOimplInstance().showAllMessage();
+    List<Message> list=(List<Message>) request.getAttribute("messageList");
 %>
 <div class="container">
     <h1 class="container">帖子管理</h1>
@@ -36,7 +36,7 @@
             <%
                 if(message.getWriter().equals(session.getAttribute("name"))){//是本人发的帖子
                     %>
-        <td><a>删除</a></td>
+        <td><a href="saveMessage.jsp?id=<%=message.getMessageID()%>">删除</a></td>
         <%
                 }
             %>

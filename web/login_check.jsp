@@ -28,7 +28,7 @@
         %>
 <div class="container">
     <h1 class="container"><%=name%>,登陆成功！</h1>
-    <a class="container" href="messageBoard.jsp">进入列表页面</a>
+    <a class="container" href="MessageServlet?statue=showAllMessage">进入列表页面</a>
 </div>
 
 <%

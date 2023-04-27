@@ -48,4 +48,22 @@ public class MessageDAOimpl implements IMessageDAO{
         System.out.println(list.toString());
         return list;
     }
+
+    @Override
+    public void deleteMessage(int id) {
+        Connection connection=ConnectionManager.getConnection();
+        PreparedStatement preparedStatement=null;
+        String str="DELETE FROM MESSAGE WHERE ID=?";
+        try {
+            preparedStatement=connection.prepareStatement(str);
+            preparedStatement.setInt(1,id);
+            preparedStatement.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        finally {
+            ConnectionManager.closeConnection(connection);
+            ConnectionManager.closeStatement(preparedStatement);
+        }
+    }
 }
