@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
+<a href="logout.jsp">注销登录</a>
 <%=session.getAttribute("name")%>
 </body>
 </html>
