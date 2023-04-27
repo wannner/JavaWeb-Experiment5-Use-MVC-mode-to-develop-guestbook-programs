@@ -15,11 +15,12 @@
 </head>
 <body>
 <%
-    List<Message> list=(List<Message>) request.getAttribute("messageList");
+    List<Message> list=(List<Message>) session.getAttribute("messageList");
+    System.out.println(list.toString());
 %>
 <div class="container">
     <h1 class="container">帖子管理</h1>
-    <h4><%="你好" + session.getAttribute("name")%></h4>
+    <h4><%="你好!" + session.getAttribute("name")%></h4>
     <a href="logout.jsp">注销登录</a>
     <hr>
     <table class="table" border="3">
@@ -36,7 +37,7 @@
             <%
                 if(message.getWriter().equals(session.getAttribute("name"))){//是本人发的帖子
                     %>
-        <td><a href="saveMessage.jsp?id=<%=message.getMessageID()%>">删除</a></td>
+        <td><a href="MessageServlet?statue=deleteMessage&id=<%=message.getMessageID()%>">删除</a></td>
         <%
                 }
             %>

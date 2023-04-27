@@ -53,11 +53,11 @@ public class MessageDAOimpl implements IMessageDAO{
     public void deleteMessage(int id) {
         Connection connection=ConnectionManager.getConnection();
         PreparedStatement preparedStatement=null;
-        String str="DELETE FROM MESSAGE WHERE ID=?";
+        String str="DELETE FROM MESSAGE WHERE messageID=?";
         try {
             preparedStatement=connection.prepareStatement(str);
             preparedStatement.setInt(1,id);
-            preparedStatement.executeQuery();
+            preparedStatement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

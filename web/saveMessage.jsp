@@ -15,7 +15,7 @@
 <h1 class="container">删除成功！</h1>
 <p class="container">即将在3秒钟后返回列表页面</p>
 <%
-    response.setHeader("Refresh", "3;url=MessageServlet?id=<%=request%>");
+    response.setHeader("Refresh", "3;url=MessageServlet?statue=showAllMessage");
 %>
 </body>
 </html>
