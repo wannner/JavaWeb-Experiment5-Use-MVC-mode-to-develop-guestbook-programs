@@ -9,14 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d36bad5a-7e19-4596-884c-67b9a2cb1d9c" name="变更" comment="写了MessageServlet.java页面，修正了页面跳转的方式（所有的页面都应该跳转到Servlet）">
+    <list default="true" id="d36bad5a-7e19-4596-884c-67b9a2cb1d9c" name="变更" comment="完成了saveMessage页面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/MessageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/MessageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/IMessageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/IMessageDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/impl/MessageDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/impl/MessageDAOimpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/classes/control/MessageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/classes/control/MessageServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/classes/dao/IMessageDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/classes/dao/IMessageDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/classes/dao/impl/MessageDAOimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/classes/dao/impl/MessageDAOimpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/delMessage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/delMessage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/messageBoard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/messageBoard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/saveMessage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/saveMessage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +253,7 @@
       <workItem from="1682472243262" duration="18698000" />
       <workItem from="1682562238681" duration="3422000" />
       <workItem from="1682565690237" duration="3167000" />
-      <workItem from="1682591478228" duration="7701000" />
+      <workItem from="1682591478228" duration="10696000" />
     </task>
     <task id="LOCAL-00001" summary="数据库创建完成">
       <created>1682472323695</created>
@@ -302,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682594997333</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="完成了saveMessage页面">
+      <created>1682601715817</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682601715817</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +336,7 @@
     <MESSAGE value="完成logout页面" />
     <MESSAGE value="完成messageBoard页面（页面详情和删除功能未做）" />
     <MESSAGE value="写了MessageServlet.java页面，修正了页面跳转的方式（所有的页面都应该跳转到Servlet）" />
-    <option name="LAST_COMMIT_MESSAGE" value="写了MessageServlet.java页面，修正了页面跳转的方式（所有的页面都应该跳转到Servlet）" />
+    <MESSAGE value="完成了saveMessage页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了saveMessage页面" />
   </component>
 </project>

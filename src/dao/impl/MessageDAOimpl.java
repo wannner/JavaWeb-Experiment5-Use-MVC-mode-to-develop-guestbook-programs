@@ -66,4 +66,34 @@ public class MessageDAOimpl implements IMessageDAO{
             ConnectionManager.closeStatement(preparedStatement);
         }
     }
+
+    @Override
+    public Message getMessageById(int id) {
+        Connection connection=ConnectionManager.getConnection();
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet=null;
+        String str="SELECT * FROM MESSAGE WHERE MESSAGEID=?";
+        Message message=new Message();
+        DateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        try {
+            preparedStatement=connection.prepareStatement(str);
+            preparedStatement.setInt(1,id);
+            resultSet=preparedStatement.executeQuery();
+            while(resultSet.next()){
+                message=new Message();
+                message.setMessageID(resultSet.getInt(1));
+                message.setTitle(resultSet.getString(2));
+                message.setContent(resultSet.getString(3));
+                message.setWriter(resultSet.getString(4));
+                message.setWriterDate(dateFormat.format(resultSet.getTimestamp(5)));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            ConnectionManager.closeStatement(preparedStatement);
+            ConnectionManager.closeConnection(connection);
+            ConnectionManager.closeResultSet(resultSet);
+        }
+        return message;
+    }
 }

@@ -30,7 +30,7 @@
                 %>
         <tr>
         <td><%=message.getMessageID()%></td>
-        <td><%=message.getTitle()%></td>
+            <td><a href="MessageServlet?statue=showMessage&id=<%=message.getMessageID()%>"><%=message.getTitle()%></a></td>
         <td><%=message.getContent()%></td>
         <td><%=message.getWriter()%></td>
         <td><%=message.getWriterDate()%></td>

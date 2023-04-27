@@ -37,6 +37,18 @@ public class MessageServlet extends HttpServlet {
             RequestDispatcher requestDispatcher=req.getRequestDispatcher("messageBoard.jsp");
             requestDispatcher.forward(req,resp);
         }
+        else if ("showMessage".equals(statue)){
+            int id=0;
+            String messageId=req.getParameter("id");
+            for (int i = 0; i < messageId.length(); i++) {
+                id=id*10+(messageId.charAt(i)-'0');
+            }
+            Message message = DAOFactory.getMessageDAOimplInstance().getMessageById(id);
+            HttpSession session=req.getSession();
+            session.setAttribute("message",message);
+            RequestDispatcher requestDispatcher=req.getRequestDispatcher("delMessage.jsp");
+            requestDispatcher.forward(req,resp);
+        }
 
     }
 
