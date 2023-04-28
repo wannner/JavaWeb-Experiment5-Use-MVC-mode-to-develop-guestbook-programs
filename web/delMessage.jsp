@@ -29,6 +29,12 @@
 <table class="container" border="3">
     <tr> <th>楼层</th> <th>内容</th> <th>回帖者</th> <th>回帖时间</th> <th>删除</th> </tr>
 </table>
+<br><br>
+<form class="container" action="MessageServlet?statue=insertRevert&id=<%=message.getMessageID()%>" method="post">
+    内容：<textarea type="text" name="content" size="70" style="height: 50px"></textarea>
+    <input type="submit">
+
+</form>
 
 </body>
 </html>

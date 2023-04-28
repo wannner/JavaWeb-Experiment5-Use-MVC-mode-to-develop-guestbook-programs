@@ -17,6 +17,7 @@
 <%
     List<Message> list=(List<Message>) session.getAttribute("messageList");
     System.out.println(list.toString());
+    int cnt=1;
 %>
 <div class="container">
     <h1 class="container">帖子管理</h1>
@@ -29,7 +30,7 @@
             for (Message message : list) {
                 %>
         <tr>
-        <td><%=message.getMessageID()%></td>
+        <td><%=cnt++%></td>
             <td><a href="MessageServlet?statue=showMessage&id=<%=message.getMessageID()%>"><%=message.getTitle()%></a></td>
         <td><%=message.getContent()%></td>
         <td><%=message.getWriter()%></td>
