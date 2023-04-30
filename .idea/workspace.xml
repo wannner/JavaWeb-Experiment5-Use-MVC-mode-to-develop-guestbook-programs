@@ -9,16 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d36bad5a-7e19-4596-884c-67b9a2cb1d9c" name="变更" comment="完成了saveMessage的页面（添加留言功能完成），修改了几个文件名（之前代码写错文件了）">
+    <list default="true" id="d36bad5a-7e19-4596-884c-67b9a2cb1d9c" name="变更" comment="完成了delMessage的页面（留言的删除功能完成）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/RevertServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/RevertServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/IRevertDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/IRevertDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/impl/RevertDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/impl/RevertDAOimpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/classes/control/RevertServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/classes/control/RevertServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/classes/dao/IRevertDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/classes/dao/IRevertDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/classes/dao/impl/RevertDAOimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/classes/dao/impl/RevertDAOimpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/delRevert.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/delRevert.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/revertMessage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/revertMessage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/MessageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/MessageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/IMessageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/IMessageDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/impl/MessageDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/impl/MessageDAOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/classes/control/MessageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/classes/control/MessageServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/classes/dao/impl/MessageDAOimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/classes/dao/impl/MessageDAOimpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/messageBoard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/messageBoard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/newMessage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/newMessage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/saveMessage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/saveMessage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +255,7 @@
       <workItem from="1682565690237" duration="3167000" />
       <workItem from="1682591478228" duration="10696000" />
       <workItem from="1682647148487" duration="10164000" />
-      <workItem from="1682835412771" duration="10754000" />
+      <workItem from="1682835412771" duration="14455000" />
     </task>
     <task id="LOCAL-00001" summary="数据库创建完成">
       <created>1682472323695</created>
@@ -334,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682861593102</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="完成了delMessage的页面（留言的删除功能完成）">
+      <created>1682863130951</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682863130951</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,6 +370,7 @@
     <MESSAGE value="完成了留言插入的界面（留言显示界面未做）" />
     <MESSAGE value="完善了当message表删除和插入时messageid的自动改变的功能（终于搞定了！！！）" />
     <MESSAGE value="完成了saveMessage的页面（添加留言功能完成），修改了几个文件名（之前代码写错文件了）" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了saveMessage的页面（添加留言功能完成），修改了几个文件名（之前代码写错文件了）" />
+    <MESSAGE value="完成了delMessage的页面（留言的删除功能完成）" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了delMessage的页面（留言的删除功能完成）" />
   </component>
 </project>

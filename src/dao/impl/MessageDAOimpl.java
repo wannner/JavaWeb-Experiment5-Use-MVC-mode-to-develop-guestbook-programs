@@ -100,4 +100,28 @@ public class MessageDAOimpl implements IMessageDAO{
         }
         return message;
     }
+
+    @Override
+    public void insertNewMessage(Message message) {
+        Connection connection=ConnectionManager.getConnection();
+        PreparedStatement preparedStatement=null,preparedStatement1=null;
+        String str="INSERT INTO MESSAGE(TITLE,CONTENT,WRITER,WRITEDATE) VALUE(?,?,?,?)";
+        try {
+            preparedStatement= connection.prepareStatement(str);
+            preparedStatement.setString(1, message.getTitle());
+            preparedStatement.setString(2, message.getContent());
+            preparedStatement.setString(3, message.getWriter());
+            preparedStatement.setString(4, message.getWriterDate());
+            preparedStatement.executeUpdate();
+            preparedStatement1 = connection.prepareStatement("SET @row_num = 0");
+            preparedStatement1.executeUpdate();
+            preparedStatement1 = connection.prepareStatement("UPDATE message SET messageID = (@row_num := @row_num + 1) ORDER BY messageID");
+            preparedStatement1.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            ConnectionManager.closeStatement(preparedStatement);
+            ConnectionManager.closeConnection(connection);
+        }
+    }
 }

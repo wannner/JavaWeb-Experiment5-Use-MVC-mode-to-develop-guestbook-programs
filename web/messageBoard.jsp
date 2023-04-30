@@ -24,6 +24,7 @@
     <h4><%="你好!" + session.getAttribute("name")%></h4>
     <a href="logout.jsp">注销登录</a>
     <hr>
+    <a class="container" href="newMessage.jsp">新增帖子</a>
     <table class="table" border="3">
         <tr><th>帖子ID</th> <th>标题</th> <th>内容</th> <th>作者</th> <th>最后修改时间</th> <th>删除</th></tr>
         <%

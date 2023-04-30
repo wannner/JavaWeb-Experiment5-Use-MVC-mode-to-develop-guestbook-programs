@@ -10,4 +10,6 @@ public interface IMessageDAO {
     public void deleteMessage(int id);
 
     public Message getMessageById(int id);
+
+    public void insertNewMessage(Message message);
 }
