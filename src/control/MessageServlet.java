@@ -31,7 +31,7 @@ public class MessageServlet extends HttpServlet {
             }
             System.out.println(id);
             DAOFactory.getMessageDAOimplInstance().deleteMessage(id);
-            RequestDispatcher requestDispatcher=req.getRequestDispatcher("saveMessage.jsp");
+            RequestDispatcher requestDispatcher=req.getRequestDispatcher("delMessage.jsp");
             requestDispatcher.forward(req,resp);
         }
         else if("showAllMessage".equals(statue)){
@@ -53,24 +53,6 @@ public class MessageServlet extends HttpServlet {
             req.setAttribute("statue","showAllRevert");
             RequestDispatcher requestDispatcher=req.getRequestDispatcher("RevertServlet");//跳转到RevertServlet去获取留言
             requestDispatcher.forward(req,resp);
-        }else if("insertRevert".equals(statue)){
-            HttpSession session=req.getSession();
-            Revert revert=new Revert();
-            String content = req.getParameter("content");
-            String messageId=req.getParameter("id");
-            int id=0;
-            for (int i = 0; i < messageId.length(); i++) {
-                id=id*10+(messageId.charAt(i)-'0');
-            }
-            //获取当前的时间
-            Date d = new Date();
-            SimpleDateFormat sbf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            String currentTime = sbf.format(d);
-            revert.setContent(content);
-            revert.setWriter((String) session.getAttribute("name"));
-            revert.setMessageID(id);
-            revert.setWriterDate(currentTime);
-            DAOFactory.getRevertDAOimpInstance().insertRevert(revert);
         }
 
     }
