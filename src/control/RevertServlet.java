@@ -22,7 +22,7 @@ public class RevertServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         String statue=(String) req.getAttribute("statue");
-        if(Objects.equals(null,statue)){
+        if(Objects.equals(null,statue)){//如果说为空代表从MessageServlet页面跳转来的
             statue=req.getParameter("statue");
         }
         if("showAllRevert".equals(statue)){
@@ -52,6 +52,21 @@ public class RevertServlet extends HttpServlet {
             revert.setWriterDate(currentTime);
             DAOFactory.getRevertDAOimpInstance().insertRevert(revert);
             RequestDispatcher requestDispatcher=req.getRequestDispatcher("saveRevert.jsp");
+            requestDispatcher.forward(req,resp);
+        }else if("deleteRevert".equals(statue)){
+            String revertId=req.getParameter("id");
+            int id=0;
+            for (int i = 0; i < revertId.length(); i++) {
+                id=id*10+(revertId.charAt(i)-'0');
+            }
+            String messageId=req.getParameter("messageId");
+            int id1=0;
+            for (int i = 0; i < messageId.length(); i++) {
+                id1=id1*10+(messageId.charAt(i)-'0');
+            }
+            DAOFactory.getRevertDAOimpInstance().deleteRevert(id);
+            req.setAttribute("id",id1);
+            RequestDispatcher requestDispatcher= req.getRequestDispatcher("delRevert.jsp");
             requestDispatcher.forward(req,resp);
         }
     }

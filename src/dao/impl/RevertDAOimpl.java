@@ -64,4 +64,21 @@ public class RevertDAOimpl implements IRevertDAO {
         return list;
     }
 
+    @Override
+    public void deleteRevert(int id) {
+        Connection connection=ConnectionManager.getConnection();
+        PreparedStatement preparedStatement=null;
+        String str="DELETE FROM REVERT WHERE REVERTID=?";
+        try {
+            preparedStatement= connection.prepareStatement(str);
+            preparedStatement.setInt(1,id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            ConnectionManager.closeConnection(connection);
+            ConnectionManager.closeStatement(preparedStatement);
+        }
+    }
+
 }

@@ -38,9 +38,9 @@
     <tr>
         <td><%=cnt++%></td> <td><%=revert.getContent()%></td> <td><%=revert.getWriter()%></td> <td><%=revert.getWriterDate()%></td>
         <%
-        if(session.getAttribute("name").equals(revert.getWriter())){//是本人发的帖子
+        if(session.getAttribute("name").equals(revert.getWriter())){//是本人发的留言
         %>
-        <td><a>删除</a></td>
+        <td><a href="RevertServlet?statue=deleteRevert&id=<%=revert.getRevertID()%>&messageId=<%=revert.getMessageID()%>">删除</a></td>
             <%
                 }
         %>

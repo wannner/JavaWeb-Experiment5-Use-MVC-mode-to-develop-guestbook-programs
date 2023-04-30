@@ -9,4 +9,6 @@ public interface IRevertDAO {
 
     public List<Revert> findAllRevertByMessageId(int id);
 
+    public void deleteRevert(int id);
+
 }
