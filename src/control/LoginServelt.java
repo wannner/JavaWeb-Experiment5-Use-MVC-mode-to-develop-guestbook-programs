@@ -22,11 +22,10 @@ public class LoginServelt extends HttpServlet {
         String name = DAOFactory.getPersonDAOimpInstance().loginCheck(id, password);
         RequestDispatcher requestDispatcher = null;
         statue = name;
-        req.setAttribute("name",statue);
+        req.setAttribute("name", statue);
         requestDispatcher = req.getRequestDispatcher("login_check.jsp");
         requestDispatcher.forward(req, resp);
     }
-
     public void doPost(HttpServletRequest req,
                        HttpServletResponse resp)
             throws ServletException, IOException {

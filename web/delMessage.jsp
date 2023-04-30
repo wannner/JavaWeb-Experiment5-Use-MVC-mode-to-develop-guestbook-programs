@@ -1,4 +1,6 @@
-<%@ page import="vo.Message" %><%--
+<%@ page import="vo.Message" %>
+<%@ page import="java.util.List" %>
+<%@ page import="vo.Revert" %><%--
   Created by IntelliJ IDEA.
   User: wannner
   Date: 2023/4/26
@@ -14,6 +16,7 @@
 <body>
 <%
     Message message=(Message)session.getAttribute("message");
+    List<Revert> list=(List<Revert>) session.getAttribute("revertList");
 %>
 <h1 class="container">帖子详情</h1>
 <a class="container" href="messageBoard.jsp">返回帖子列表</a>
@@ -28,6 +31,15 @@
 <h2 class="container">回帖详情</h2>
 <table class="container" border="3">
     <tr> <th>楼层</th> <th>内容</th> <th>回帖者</th> <th>回帖时间</th> <th>删除</th> </tr>
+    <%
+        for (Revert revert : list) {
+            %>
+    <tr>
+
+    </tr>
+    <%
+        }
+    %>
 </table>
 <br><br>
 <form class="container" action="MessageServlet?statue=insertRevert&id=<%=message.getMessageID()%>" method="post">

@@ -30,7 +30,7 @@
             for (Message message : list) {
                 %>
         <tr>
-        <td><%=cnt++%></td>
+        <td><%=message.getMessageID()%></td>
             <td><a href="MessageServlet?statue=showMessage&id=<%=message.getMessageID()%>"><%=message.getTitle()%></a></td>
         <td><%=message.getContent()%></td>
         <td><%=message.getWriter()%></td>

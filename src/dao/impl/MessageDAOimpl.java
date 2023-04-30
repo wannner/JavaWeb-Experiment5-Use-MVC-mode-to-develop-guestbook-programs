@@ -45,25 +45,29 @@ public class MessageDAOimpl implements IMessageDAO{
             ConnectionManager.closeStatement(preparedStatement);
             ConnectionManager.closeResultSet(resultSet);
         }
-        System.out.println(list.toString());
         return list;
     }
 
     @Override
     public void deleteMessage(int id) {
         Connection connection=ConnectionManager.getConnection();
-        PreparedStatement preparedStatement=null;
+        PreparedStatement preparedStatement=null,preparedStatement1=null;
         String str="DELETE FROM MESSAGE WHERE messageID=?";
         try {
             preparedStatement=connection.prepareStatement(str);
             preparedStatement.setInt(1,id);
             preparedStatement.executeUpdate();
+            preparedStatement1 = connection.prepareStatement("SET @row_num = 0");
+            preparedStatement1.executeUpdate();
+            preparedStatement1 = connection.prepareStatement("UPDATE message SET messageID = (@row_num := @row_num + 1) ORDER BY messageID");
+            preparedStatement1.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         finally {
             ConnectionManager.closeConnection(connection);
             ConnectionManager.closeStatement(preparedStatement);
+            ConnectionManager.closeStatement(preparedStatement1);
         }
     }
 
